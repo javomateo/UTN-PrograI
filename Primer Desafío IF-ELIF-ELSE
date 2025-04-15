@@ -1,0 +1,45 @@
+"Primer Desafío - IF ELIF ELSE "
+
+# 1. A partir del ingreso de la altura en centímetros de un jugador de baloncesto, el
+# programa deberá determinar la posición del jugador en la cancha, considerando los
+# siguientes parámetros:
+# ● Menos de 160 cm: Base
+# ● Entre 160 cm y 179 cm: Escolta
+# ● Entre 180 cm y 199 cm: Alero
+# ● 200 cm o más: Ala-Pívot o Pívot
+
+altura_jugador = int(input("Por favor, ingrese la altura del jugador en centímetros: "))
+while altura_jugador <=100:
+    altura_jugador = int(input("Error. Por favor, ingrese la altura del jugador en centímetros: "))
+
+if altura_jugador <= 159:
+    print("La posición del jugador es BASE.")
+elif altura_jugador <= 179:
+    print("La posición del jugador es ESCOLTA.")
+elif altura_jugador <= 199:
+    print("La posición del jugador es ALERO.")
+else: print("La posición del jugador es ALA-PIVOT o PIVOT.")
+
+
+
+
+# 2. Calcular una nota aleatoria entre el 1 y el 10 inclusive, para luego mostrar un
+# mensaje según el valor:
+# ● 6, 7, 8, 9 y 10 ---> Promoción directa, la nota es ...
+# ● 4 y 5 ---> Aprobado, la nota es ...
+# ● 1, 2 y 3 ---> Desaprobado, la nota es ...
+
+PROMOCION_DIRECTA = [6, 7, 8, 9, 10]
+APROBADO = [4, 5]
+DESAPROBADO = [1, 2, 3]
+
+nota = int(input("Ingrese la nota: "))
+while nota < 1 or nota > 10:
+    nota = int(input("Error. Ingrese una nota entre 1 y 10: "))
+
+if nota in PROMOCION_DIRECTA:
+    print(f"Promoción directa, la nota es {nota}.")
+elif nota in APROBADO:
+    print(f"Aprobado, la nota es {nota}.")
+elif nota in DESAPROBADO:
+    print(f"Desaprobado, la nota es {nota}.")
